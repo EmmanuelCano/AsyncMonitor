@@ -4,9 +4,9 @@ import time
 import schedule
 import re
 
-Deviceip="10.207.195.178"
+Deviceip="10.10.10.10"
 username="admin"
-password="Cano09101207#"
+password="password"
 
 
 print('········································································· \n')
