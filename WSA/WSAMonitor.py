@@ -35,7 +35,7 @@ elif Option == 2:
 
  print('Please wait while data is processed and saved...')
 
- fd = open(r''+Path+filename+'.txt','w') # Where you want the file to save to.'txt/Users/ecanogut/Desktop/Splunk/WSA_Info.txt
+ fd = open(r''+Path+filename+'.txt','w') # Where you want the file to save to.
  old_stdout = sys.stdout
  sys.stdout = fd
 
@@ -81,7 +81,7 @@ elif Option == 3:
  Path=str(input('Please define the path where the TXT file will be save in the following format: /Users/Desktop/): '))
  print('Please wait while data is processed and saved...')
 
- fd = open(r''+Path+filename+'.txt','w') # Where you want the file to save to.'txt/Users/ecanogut/Desktop/Splunk/WSA_Info.txt
+ fd = open(r''+Path+filename+'.txt','w') # Where you want the file to save to.
  old_stdout = sys.stdout
  sys.stdout = fd
 
