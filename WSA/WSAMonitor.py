@@ -13,7 +13,7 @@ print('····································�
 print('·······················Welcome to WSAMonitor tool······················ \n')
 print('········································································· \n')
 
-Option=int(input('Please select the option from the Menu: \n 1.-Monitor every 5 mins \n 2.-Get all info  \n 3.-Device Version \n 4.-Users conected to the device \n 5.-CPU, Memory usage \n 6.-Licenses installed \n 7.-WCCP Information (Only if this feature is enabled) \n 8.-Exit \n \n Type the number of the option: '))
+Option=int(input('Please select the option from the Menu: \n 1.-Monitor status every 5 mins \n 2.-Get all info  \n 3.-Device Version \n 4.-Users conected to the device \n 5.-CPU, Memory usage \n 6.-Licenses installed \n 7.-WCCP Information (Only if this feature is enabled) \n 8.-Exit \n \n Type the number of the option: '))
 
 
 if Option == 1:
@@ -22,10 +22,10 @@ if Option == 1:
                                    username=username,password=password)
 
     print('\n###################################################################\n')
-    print('...................Users connected to the devices....................\n')
+    print('...................Showing status statistics....................\n')
     output = connection.send_command('status')
     print(output)
-    time.sleep(10)
+    time.sleep(300)
      #connection.disconnect()
 
 elif Option == 2:
