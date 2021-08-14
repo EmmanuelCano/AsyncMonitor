@@ -13,11 +13,6 @@ print('·······················Welcome to AsyncMonitor too
 print('········································································· \n')
 Option=int(input('Please select the option from the Menu: \n 1.-Monitor every 5 mins \n 2.-Get all info  \n 3.-Device Version \n 4.-Users conected to the device \n 5.-Information of your User \n 6.-CPU, Memory usage \n 7.-Licenses installed \n 8.-WCCP Information (Only if this feature is enabled) \n 9.-Exit \n \n Type the number of the option: '))
 
-#if Option == 1:
-# ip_add_file = open(r'/Users/ecanogut/Desktop/Splunk/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
-# for host in ip_add_file:
-#     host = host.strip()
-#     print(host)
 
 ip_add_file=open(r'/Users/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
 
