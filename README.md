@@ -1,6 +1,6 @@
 # AsyncMonitor
 
-Cisco Secure Web Appliance (aka WSA), Email Secure (aka ESA) are solutions used to protect customer infraestructres against email or web attacks while they are managed through Secure Email and Web Manager Nowadays (aka SMA), however, there are limited options to monitor these solutions, being SNMP protocol the most used as prior to version 14.x, API does not have any verbs to achieve this. 
+Cisco Secure Web Appliance (aka WSA), Email Secure (aka ESA) are solutions used to protect customer infraestructres against email or web attacks while they are managed through Secure Email and Web Manager (aka SMA), however, there are limited options to monitor these solutions, being SNMP protocol the most used as prior to version 14.x, API does not have any verbs to achieve this. 
 
 AsyncMonitor is a script developed in Python using Netmiko for automating the monitoring and gathering of information in terms of Hardware Resources utilization and general information from the device that is saved in a txt file. Given that the mentioned solutions run the same operating system (AsyncOs) and with the exception of Secure Email and Web Manager Nowadays (aka SMA) that requires minimal modification of one option, this script can be used with all of them.
 
