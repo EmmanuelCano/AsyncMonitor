@@ -1,0 +1,4 @@
+Python==3.8.2
+netmiko==2.4.2
+sys
+time
