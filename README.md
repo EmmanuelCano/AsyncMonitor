@@ -89,7 +89,7 @@ Please select the option from the Menu:
 ```
 ####################################################################################################
 
-....................Device Version and additional information for Device: X.X.X.X.............
+....................Device Version and additional information for Device : X.X.X.X.............
 
 
 Current Version
@@ -147,7 +147,7 @@ Advanced Malware Protection - Cisco Internal Certificates: 1.0.0-101 (Wed Mar
 
 Username  Role           Login Time  Idle Time  Remote Host   What
 ========  =============  ==========  =========  ============  ====
-admin1    Administrator  09:30AM     0s         10.24.47.152  CLI
+admin1    Administrator  09:30AM     0s         10.X.X.X      CLI
 
 ##################################################################################################
 
@@ -202,10 +202,9 @@ license_version          1.1
 
 ##################################################################################################
 
-..WCCP Statistics (Only if this feature is enable) for Device: 10.207.195.178..
+..WCCP Statistics (Only if this feature is enable) for Device: X.X.X.X..
 
-scoise.lab> 
-
+WCCP seems inactive!!
 =====================================================================
 
 ####################################################################################################
@@ -270,7 +269,7 @@ Advanced Malware Protection - Cisco Internal Certificates: 1.0.0-101 (Thu Mar
 
 Username  Role           Login Time  Idle Time  Remote Host   What
 ========  =============  ==========  =========  ============  ====
-admin1    Administrator  01:30PM     1s         10.24.47.152  CLI
+admin1    Administrator  01:30PM     1s         X.X.X.X       CLI
 
 ##################################################################################################
 
@@ -283,7 +282,7 @@ Groups: admin, operators, config, log, guest
 
 ##################################################################################################
 
-.........Resources utilization for Device: 10.207.195.119.....................................
+.........Resources utilization for Device: X.X.X.X.....................................
 
 
 Enter "status detail" for more information.
