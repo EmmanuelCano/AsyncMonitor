@@ -46,37 +46,37 @@ elif Option == 2:
      connection= netmiko.ConnectHandler(ip=host,device_type="cisco_ios",
                                    username=username,password=password)
 
-     print('####################################################################################################\n')
+     print('#################################################################################################\n')
 
-     print('.........................Device Version and additional information for Device: '+host+'.............\n')
+     print('......................Device Version and additional information for Device: '+host+'.............\n')
      output = connection.send_command('version')
      print(output)
 
-     print('\n##################################################################################################\n')
+     print('\n###############################################################################################\n')
 
-     print('......................Users connected to the devices for Device: '+host+'...........................\n')
+     print('....................Users connected to the devices for Device: '+host+'..........................\n')
      output = connection.send_command('who')
      print(output)
 
-     print('\n##################################################################################################\n')
+     print('\n###############################################################################################\n')
 
-     print('.....................Information of user logged for Device: '+host+'................................\n')
+     print('...................Information of user logged for Device: '+host+'...............................\n')
      output = connection.send_command('whoami')
      print(output)
 
-     print('\n##################################################################################################\n')
+     print('\n###############################################################################################\n')
 
-     print('...................Resources utilization for Device: '+host+'.......................................\n')
+     print('...................Resources utilization for Device: '+host+'....................................\n')
      output = connection.send_command('status')
      print(output)
 
-     print('\n##################################################################################################\n')
+     print('\n###############################################################################################\n')
 
-     print('....................................Device Licenses for Device: '+host+'............................\n')
+     print('....................................Device Licenses for Device: '+host+'.........................\n')
      output = connection.send_command('showlicense')
      print(output)
 
-     print('\n##################################################################################################\n')
+     print('\n###############################################################################################\n')
 
      print('..WCCP Statistics (Only if this feature is enable) for Device: '+host+'..\n')
      output = connection.send_command('wccpstat')
@@ -127,8 +127,8 @@ elif Option == 4:
      connection= netmiko.ConnectHandler(ip=host,device_type="cisco_ios",
                                    username=username,password=password)
 
-     print('\n################################################################################################\n')
-     print('..........................Users connected to the device '+host+'..................................\n')
+     print('\n###############################################################################################\n')
+     print('..........................Users connected to the Device: '+host+'................................\n')
      output = connection.send_command('who')
      print(output)
      connection.disconnect()
@@ -151,7 +151,7 @@ elif Option == 5:
                                    username=username,password=password)
 
      print('\n#############################################################################################\n')
-     print('...............Information for the Admin User logged on the device:  '+host+'..................\n')
+     print('...............Information for the Admin User logged on the Device:  '+host+'..................\n')
      output = connection.send_command('whoami')
      print(output)
      connection.disconnect()
@@ -173,7 +173,7 @@ elif Option == 6:
                                    username=username,password=password)
 
      print('\n#############################################################################################\n')
-     print('...................Resources utilization for the device:  '+host+'.............................\n')
+     print('...................Resources utilization for the Device:  '+host+'.............................\n')
      output = connection.send_command('status')
      print(output)
      connection.disconnect()
@@ -196,7 +196,7 @@ elif Option == 7:
                                    username=username,password=password)
 
      print('\n#############################################################################################\n')
-     print('...................Device Licenses for the device:  '+host+'...................................\n')
+     print('...................Device Licenses for the Device:  '+host+'...................................\n')
      output = connection.send_command('showlicense')
      print(output)
      connection.disconnect()
