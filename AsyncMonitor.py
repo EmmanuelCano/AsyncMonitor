@@ -17,6 +17,7 @@ from pathlib import Path
 
 username=input("Please introduce the WSA username: ") 
 password=getpass.getpass("Please introduce the WSA password: ")
+path='/Users/ecanogut/Documents/GitHub/AsyncMonitor/IPAddressList.txt'
 
 #The menu will show the possible options to be performed by the script.
 print('········································································· \n')
@@ -25,7 +26,7 @@ print('····································�
 Option=int(input('Please select the option from the Menu: \n 1.-Monitor every 5 mins \n 2.-Get all info  \n 3.-Device Version \n 4.-Users conected to the device \n 5.-Information of your User \n 6.-CPU, Memory usage \n 7.-Licenses installed \n 8.-WCCP Information (Only if this feature is enabled) \n 9.-Exit \n \n Type the number of the option: '))
 
 
-ip_add_file=open(r'/Users/ecanogut/Documents/GitHub/AsyncMonitor/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ip_add_file=open(r'/IPAddresslist_Path/IPAddressList.txt', 'r') # a simple list of IP addresses you want to connect to each one on a new line
 
 if Option == 1:
   ip=str(input('Please define the Device IP address will be monitored: '))
@@ -50,7 +51,7 @@ elif Option == 2:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/Users/ecanogut/Documents/GitHub/AsyncMonitor/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -107,7 +108,7 @@ elif Option == 3:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/Users/ecanogut/Documents/GitHub/AsyncMonitor/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -131,7 +132,7 @@ elif Option == 4:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/Users/ecanogut/Documents/GitHub/AsyncMonitor/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -154,7 +155,7 @@ elif Option == 5:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/Users/ecanogut/Documents/GitHub/AsyncMonitor/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -176,7 +177,7 @@ elif Option == 6:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/Users/ecanogut/Documents/GitHub/AsyncMonitor/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -199,7 +200,7 @@ elif Option == 7:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/Users/ecanogut/Documents/GitHub/AsyncMonitor/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -222,7 +223,7 @@ elif Option == 8:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/Users/ecanogut/Documents/GitHub/AsyncMonitor/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
