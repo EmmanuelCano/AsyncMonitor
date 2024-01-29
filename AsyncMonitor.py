@@ -17,7 +17,7 @@ from pathlib import Path
 
 username=input("Please introduce the WSA username: ") 
 password=getpass.getpass("Please introduce the WSA password: ")
-path='/Users/ecanogut/Documents/GitHub/AsyncMonitor/IPAddressList.txt'
+
 
 #The menu will show the possible options to be performed by the script.
 print('········································································· \n')
@@ -25,7 +25,7 @@ print('·······················Welcome to AsyncMonitor too
 print('········································································· \n')
 Option=int(input('Please select the option from the Menu: \n 1.-Monitor every 5 mins \n 2.-Get all info  \n 3.-Device Version \n 4.-Users conected to the device \n 5.-Information of your User \n 6.-CPU, Memory usage \n 7.-Licenses installed \n 8.-WCCP Information (Only if this feature is enabled) \n 9.-Exit \n \n Type the number of the option: '))
 
-
+#Please add the complete path where IPAddresslist file is located
 ip_add_file=open(r'/IPAddresslist_Path/IPAddressList.txt', 'r') # a simple list of IP addresses you want to connect to each one on a new line
 
 if Option == 1:
