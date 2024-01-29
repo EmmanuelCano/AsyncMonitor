@@ -15,12 +15,9 @@ from pathlib import Path
 
 #Introduce credentials to access to the WSA device via SSH
 
-username=input("Please introduce the WSA username: ") #"admin1"
-password=getpass.getpass("Please introduce the WSA password: ") #Cano09101207#
+username=input("Please introduce the WSA username: ") 
+password=getpass.getpass("Please introduce the WSA password: ")
 
-#username="admin"
-#password="Wsa2023#"
-#password=str(Password)
 #The menu will show the possible options to be performed by the script.
 print('········································································· \n')
 print('·······················Welcome to AsyncMonitor tool······················ \n')
