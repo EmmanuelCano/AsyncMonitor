@@ -11,6 +11,7 @@ import schedule
 import os
 import getpass
 from pathlib import Path
+import urllib.request
 
 
 #Introduce credentials to access to the WSA device via SSH
@@ -23,10 +24,10 @@ password=getpass.getpass("Please introduce the WSA password: ")
 print('········································································· \n')
 print('·······················Welcome to AsyncMonitor tool······················ \n')
 print('········································································· \n')
-Option=int(input('Please select the option from the Menu: \n 1.-Monitor every 5 mins \n 2.-Get all info  \n 3.-Device Version \n 4.-Users conected to the device \n 5.-Information of your User \n 6.-CPU, Memory usage \n 7.-Licenses installed \n 8.-WCCP Information (Only if this feature is enabled) \n 9.-Exit \n \n Type the number of the option: '))
+Option=int(input('Please select the option from the Menu: \n 1.-Monitor every 5 mins \n 2.-Get all info  \n 3.-Device Version \n 4.-Users conected to the device \n 5.-Information of your User \n 6.-CPU, Memory usage \n 7.-Licenses installed \n 8.-WCCP Information (Only if this feature is enabled) \n 9.-Get prox_stats \n 10.-Exit \n \n Type the number of the option: '))
 
 #Please add the complete path where IPAddresslist file is located
-ip_add_file=open(r'/IPAddresslist_Path/IPAddressList.txt', 'r') # a simple list of IP addresses you want to connect to each one on a new line
+ip_add_file=open(r'IPAddressList.txt', 'r') # a simple list of IP addresses you want to connect to each one on a new line
 
 if Option == 1:
   ip=str(input('Please define the Device IP address will be monitored: '))
@@ -51,7 +52,7 @@ elif Option == 2:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -108,7 +109,7 @@ elif Option == 3:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -132,7 +133,7 @@ elif Option == 4:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -155,7 +156,7 @@ elif Option == 5:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -177,7 +178,7 @@ elif Option == 6:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -200,7 +201,7 @@ elif Option == 7:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -223,7 +224,7 @@ elif Option == 8:
  old_stdout = sys.stdout
  sys.stdout = fd
 
- ip_add_file = open(r'/IPAddresslist_Path/IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
+ ip_add_file = open(r'IPAddressList.txt','r') # a simple list of IP addresses you want to connect to each one on a new line
  for host in ip_add_file:
      host = host.strip()
 
@@ -238,6 +239,10 @@ elif Option == 8:
 
 
 elif Option == 9:
+  ip=str(input('Please define the Device IP address will be monitored: '))
+  urllib.request.urlretrieve('ftp://'+username+':'+password+'@'+ip+'/track_stats/prox_track.log', 'prox_track.log')
+  
+elif Option == 10:
   exit()
 
 else:
